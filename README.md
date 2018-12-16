@@ -22,6 +22,6 @@ This project is about basics of Android development, and includes following aspe
 
 ## Results
 
-![main-activity](https://github.com/cwiz/sandwich-club-starter-code/blob/master/screenshots/screenshots/device-2018-12-16-095642.png?raw=true "Main Activity")
+![main-activity](https://github.com/cwiz/sandwich-club-starter-code/blob/master/screenshots/device-2018-12-16-095642.png?raw=true "Main Activity")
 
-![details-activity](https://github.com/cwiz/sandwich-club-starter-code/blob/master/screenshots/screenshots/screenshots/device-2018-12-16-095712.png?raw=true "Details Activity")
+![details-activity](https://github.com/cwiz/sandwich-club-starter-code/blob/master/screenshots/device-2018-12-16-095712.png?raw=true "Details Activity")
