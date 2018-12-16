@@ -1,45 +1,17 @@
 package com.udacity.sandwichclub.model;
 
-import java.util.List;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.IOException;
 
 public class Sandwich {
 
-    private String mainName;
-    private List<String> alsoKnownAs = null;
-    private String placeOfOrigin;
-    private String description;
-    private String image;
-    private List<String> ingredients = null;
-
-    /**
-     * No args constructor for use in serialization
-     */
-    public Sandwich() {
+    public SandwichName getName() {
+        return name;
     }
 
-    public Sandwich(String mainName, List<String> alsoKnownAs, String placeOfOrigin, String description, String image, List<String> ingredients) {
-        this.mainName = mainName;
-        this.alsoKnownAs = alsoKnownAs;
-        this.placeOfOrigin = placeOfOrigin;
-        this.description = description;
-        this.image = image;
-        this.ingredients = ingredients;
-    }
-
-    public String getMainName() {
-        return mainName;
-    }
-
-    public void setMainName(String mainName) {
-        this.mainName = mainName;
-    }
-
-    public List<String> getAlsoKnownAs() {
-        return alsoKnownAs;
-    }
-
-    public void setAlsoKnownAs(List<String> alsoKnownAs) {
-        this.alsoKnownAs = alsoKnownAs;
+    public void setName(SandwichName name) {
+        this.name = name;
     }
 
     public String getPlaceOfOrigin() {
@@ -66,11 +38,18 @@ public class Sandwich {
         this.image = image;
     }
 
-    public List<String> getIngredients() {
+    public String[] getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(List<String> ingredients) {
+    public void setIngredients(String[] ingredients) {
         this.ingredients = ingredients;
     }
+
+    SandwichName name;
+    String placeOfOrigin;
+    String description;
+    String image;
+    String[] ingredients;
 }
+

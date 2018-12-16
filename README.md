@@ -1,26 +1,27 @@
-# Sandwich Club Project Starter Code
+# Project: Sandwich Club
 
-## Project Overview
-In this project, you will complete the **Sandwich Club** app to
-show the details of each sandwich once it is selected.
+**Surovtsev Sergei**
+Udacity Android Developer Nanodegree
+<br />
+Class of November 2018
+<br />
 
-## Why this Project
+## Project Description
+A simple application to show list of sandwiches and display sandwich details once user clicked on it.
+This project is about basics of Android development, and includes following aspects of it:
 
-Building a layout and populating its fields from data received as JSON
-is a common task for Android Developers. Although JSON parsing is usually
-done using libraries, writing the JSON parsing for  this project will
-help you to better understand how it is processed.
+* Activities
+* Layouts
+* Data Manipulation and JSON Processing
 
-## What Will I Learn?
-Through this project, you will:
-- Learn how to submit projects for review
-- Practice JSON parsing to a model object
-- Design an activity layout
-- Populate all fields in the layout accordingly
+## Technical Formulation of Problem
 
-## How Do I Complete this Project?
-Download the [Sandwich Club app starter code.](https://github.com/udacity/sandwich-club-starter-code)
+* Fork project starter code from [Github](https://github.com/udacity/sandwich-club-starter-code)
+* Add Sandwich Model parsing via [Jackson](https://www.baeldung.com/jackson-object-mapper-tutorial)
+* Populate Details view with data
 
-Design the layout for the detail activity so the different elements
-display in a sensible way. Implement the JSON parsing in JsonUtils so it
-produces a Sandwich Object that can be used to populate the UI that you designed.
+## Results
+
+![main-activity](https://github.com/cwiz/sandwich-club-starter-code/blob/master/screenshots/screenshots/device-2018-12-16-095642.png?raw=true "Main Activity")
+
+![details-activity](https://github.com/cwiz/sandwich-club-starter-code/blob/master/screenshots/screenshots/screenshots/device-2018-12-16-095712.png?raw=true "Details Activity")
