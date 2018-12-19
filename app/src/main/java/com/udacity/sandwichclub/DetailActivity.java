@@ -9,7 +9,9 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.udacity.sandwichclub.model.Sandwich;
-import com.udacity.sandwichclub.model.SandwichUtils;
+import com.udacity.sandwichclub.utils.JsonUtils;
+
+import org.json.JSONException;
 
 
 public class DetailActivity extends AppCompatActivity {
@@ -48,7 +50,13 @@ public class DetailActivity extends AppCompatActivity {
 
         String[] sandwiches = getResources().getStringArray(R.array.sandwich_details);
         String json = sandwiches[position];
-        Sandwich sandwich = SandwichUtils.deserializeJSON(json);
+        Sandwich sandwich = null;
+        try {
+            sandwich = JsonUtils.parseSandwichJson(json);
+        } catch (JSONException e) {
+            closeOnError();
+            return;
+        }
         if (sandwich == null) {
             closeOnError();
             return;
@@ -63,10 +71,10 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI(Sandwich sandwich) {
-        setTitle(sandwich.getName().getMainName());
+        setTitle(sandwich.getName());
 
         ingredientsTv.setText(String.join("\n", sandwich.getIngredients()));
-        alsoKnownAsTv.setText(String.join(", ", sandwich.getName().getAlsoKnownAs()));
+        alsoKnownAsTv.setText(String.join(", ", sandwich.getAlsoKnownAs()));
         placeOfOriginTv.setText(sandwich.getPlaceOfOrigin());
         descriptionTv.setText(sandwich.getDescription());
 

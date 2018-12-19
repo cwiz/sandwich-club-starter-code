@@ -3,16 +3,16 @@ package com.udacity.sandwichclub.model;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
+import java.util.List;
 
 public class Sandwich {
 
-    public SandwichName getName() {
-        return name;
-    }
-
-    public void setName(SandwichName name) {
-        this.name = name;
-    }
+    String name;
+    List<String> alsoKnownAs;
+    String placeOfOrigin;
+    String image;
+    String description;
+    List<String> ingredients;
 
     public String getPlaceOfOrigin() {
         return placeOfOrigin;
@@ -38,18 +38,29 @@ public class Sandwich {
         this.image = image;
     }
 
-    public String[] getIngredients() {
+    public List<String> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(String[] ingredients) {
+    public void setIngredients(List<String> ingredients) {
         this.ingredients = ingredients;
     }
 
-    SandwichName name;
-    String placeOfOrigin;
-    String description;
-    String image;
-    String[] ingredients;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<String> getAlsoKnownAs() {
+        return alsoKnownAs;
+    }
+
+    public void setAlsoKnownAs(List<String> alsoKnownAs) {
+        this.alsoKnownAs = alsoKnownAs;
+    }
+
 }
 
